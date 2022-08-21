@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
 import BMO from '../assets/BMO.webp';
-import Bubblegum from '../assets/Bubblegum.webp';
-import CinnamonBun from '../assets/cinnamonbun.webp';
+import Bubblegum from '../assets/bubblegum.jpg';
+import CinnamonBun from '../assets/cinnamonBun.jpg';
 import Finn from '../assets/FinnHeadshot.webp';
-import FlamePrincess from '../assets/FlamePrincess.webp';
+import FlamePrincess from '../assets/flamePrincess.webp';
 import Gunter from '../assets/gunter.webp';
 import IceKing from '../assets/iceKing.webp';
 import Jake from '../assets/jake.webp';
@@ -12,6 +12,8 @@ import LSP from '../assets/lsp.jpg';
 import Marceline from '../assets/marceline.jpg';
 import PeppermintButler from '../assets/peppermintButler.webp';
 import TreeTrunks from '../assets/treeTrunks.webp';
+import Cards from './Cards';
+import '../App.css';
 
 const Gameboard = () => {
   const [currentScore, setCurrentScore] = useState(0);
@@ -61,15 +63,21 @@ const Gameboard = () => {
   return (
     <div className="gameBoard">
       <section className="scoreBoard">
-        <div>Current score: {currentScore}</div>
-        <div>Best score: {bestScore}</div>
-        <div>Max score: {maxScore}</div>
+        <div className="score">
+          Current score<div className="scoreNum">: {currentScore}</div>
+        </div>
+        <div className="score">
+          Best score<div className="scoreNum">: {bestScore}</div>
+        </div>
+        <div className="score">
+          Max score<div className="scoreNum">: {maxScore}</div>
+        </div>
       </section>
 
       <section className="cardContainer">
         {shuffleCharacters(characters).map((character) => {
           return (
-            <Card
+            <Cards
               key={character.id}
               image={character.image}
               name={character.name}
