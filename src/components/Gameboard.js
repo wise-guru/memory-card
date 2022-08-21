@@ -33,6 +33,55 @@ const Gameboard = () => {
     { name: 'Peppermint Butler', image: PeppermintButler, id: uniqid() },
     { name: 'Tree Trunks', image: TreeTrunks, id: uniqid() }
   ];
+
+  const shuffleCharacters = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  const incrementScore = (clickedCharacter) => {
+    if (comparison.includes(clickedCharacter)) {
+      setComparison([]);
+      setCurrentScore(0);
+    } else {
+      setComparison([...comparison, clickedCharacter]);
+      setCurrentScore(currentScore + 1);
+    }
+  };
+
+  useEffect(() => {
+    if (currentScore > bestScore) {
+      setBestScore(currentScore);
+    }
+  }, [currentScore, bestScore]);
+
+  return (
+    <div className="gameBoard">
+      <section className="scoreBoard">
+        <div>Current score: {currentScore}</div>
+        <div>Best score: {bestScore}</div>
+        <div>Max score: {maxScore}</div>
+      </section>
+
+      <section className="cardContainer">
+        {shuffleCharacters(characters).map((character) => {
+          return (
+            <Card
+              key={character.id}
+              image={character.image}
+              name={character.name}
+              incrementScore={(clickedCharacter) => {
+                incrementScore(clickedCharacter);
+              }}
+            />
+          );
+        })}
+      </section>
+    </div>
+  );
 };
 
 export default Gameboard;
