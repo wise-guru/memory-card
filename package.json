@@ -9,6 +9,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "uniqid": "^5.4.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -38,7 +39,14 @@
     ]
   },
   "devDependencies": {
-    "gh-pag,es": "^4.0.0"
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "gh-pages": "^4.0.0",
+    "prettier": "2.7.1"
   },
   "homepage": "https://wise-guru.github.io/memory-card"
 }
