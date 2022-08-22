@@ -10,6 +10,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  background-color:#0c2299;
   background-image:url('./assets/landscape.jpg') ;
   background-repeat: no-repeat;
   font-family: "ATFont", sans-serif, 'Courier New', Courier, monospace;
