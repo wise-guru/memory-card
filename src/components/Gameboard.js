@@ -30,7 +30,7 @@ const Gameboard = () => {
     { name: 'Gunter', image: Gunter, id: uniqid() },
     { name: 'Ice King', image: IceKing, id: uniqid() },
     { name: 'Jake', image: Jake, id: uniqid() },
-    { name: 'Lumpy State Princess', image: LSP, id: uniqid() },
+    { name: 'Lumpy Space Princess', image: LSP, id: uniqid() },
     { name: 'Marceline', image: Marceline, id: uniqid() },
     { name: 'Peppermint Butler', image: PeppermintButler, id: uniqid() },
     { name: 'Tree Trunks', image: TreeTrunks, id: uniqid() }
