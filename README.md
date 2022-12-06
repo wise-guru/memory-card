@@ -21,3 +21,4 @@ Live Link: https://wise-guru.github.io/memory-card/
 1. A scoreboard displays in real-time the current, best, and highest score.
 2. The current score resets if an image is mistakenly duplicated.
 3. This game utilizes React functional components.
+4. Features CSS Grid and mobile responsiveness.
