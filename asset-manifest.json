@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.89762d00.css",
-    "main.js": "/memory-card/static/js/main.abf72433.js",
+    "main.css": "/memory-card/static/css/main.dfd3c0ca.css",
+    "main.js": "/memory-card/static/js/main.804c8bc7.js",
     "static/media/landscape.jpg": "/memory-card/static/media/landscape.d5cd26fcda234d9c4d81.jpg",
     "static/media/adventureTime.webp": "/memory-card/static/media/adventureTime.fc8d1e2f5b2bf8798d00.webp",
     "static/media/cinnamonBun.jpg": "/memory-card/static/media/cinnamonBun.494017fb9fd10c5764d8.jpg",
@@ -17,11 +17,11 @@
     "static/media/BMO.webp": "/memory-card/static/media/BMO.1ecb2dc20f486d01f099.webp",
     "static/media/gunter.webp": "/memory-card/static/media/gunter.0fbc2e8683617582d198.webp",
     "index.html": "/memory-card/index.html",
-    "main.89762d00.css.map": "/memory-card/static/css/main.89762d00.css.map",
-    "main.abf72433.js.map": "/memory-card/static/js/main.abf72433.js.map"
+    "main.dfd3c0ca.css.map": "/memory-card/static/css/main.dfd3c0ca.css.map",
+    "main.804c8bc7.js.map": "/memory-card/static/js/main.804c8bc7.js.map"
   },
   "entrypoints": [
-    "static/css/main.89762d00.css",
-    "static/js/main.abf72433.js"
+    "static/css/main.dfd3c0ca.css",
+    "static/js/main.804c8bc7.js"
   ]
 }
