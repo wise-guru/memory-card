@@ -5,7 +5,7 @@ function EndGameModal(props) {
   return (
     <div className="bgModal">
       <div className="modalContent">
-        <h1>You {endGameModal}! Try again:</h1>
+        <h1>You {endGameModal}! Ready to play another round?</h1>
         <div className="button-container">
           <button type="button" onClick={() => resetGame()}>
             Play again

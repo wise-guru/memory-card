@@ -120,6 +120,7 @@ body.modal {
   position: relative;
   border-radius: 4px;
   padding: 20px;
+  text-align: center;
 
   display: grid;
   justify-content: center;
@@ -136,10 +137,15 @@ body.modal {
   width: 10rem;
   height: 3rem;
   border-radius: 50px;
+
+  background-color: #fff;
+  color: #0c2299;
+  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 .modalContent button:hover {
-  background-color: rgba(184, 179, 179, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
 }
 
