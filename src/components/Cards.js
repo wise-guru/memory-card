@@ -4,7 +4,9 @@ const Cards = (props) => {
   return (
     <div className="card" onClick={() => props.incrementScore(props.name)}>
       <div className="cardName">{props.name}</div>
-      <img className="cardImage" src={props.image} alt={props.name} />
+      <div className="image-box">
+        <img className="cardImage" src={props.image} alt={props.name} />
+      </div>
     </div>
   );
 };

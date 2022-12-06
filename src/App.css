@@ -9,12 +9,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 100vw;
   background-color:#0c2299;
   background-image:url('./assets/landscape.jpg') ;
   background-repeat: no-repeat;
   font-family: "ATFont", sans-serif, 'Courier New', Courier, monospace;
 
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -67,6 +71,10 @@ h1 {
   background-color: #fff;
   border-radius: 1rem;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
@@ -87,3 +95,99 @@ h1 {
   gap: 15px;
 }
 
+/*---------------End Game Modal --------------------*/
+body.modal {
+  overflow: hidden;
+}
+
+.bgModal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 500px;
+  height: 300px;
+  background-color: #0c2299;
+  color:#fff;
+  position: relative;
+  border-radius: 4px;
+  padding: 20px;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.modalContent .button-container {
+  display: grid;
+  place-items: center;
+}
+
+.modalContent button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+}
+
+.modalContent button:hover {
+  background-color: rgba(184, 179, 179, 0.7);
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 630px) {
+  .logo {
+    max-width: 100%;
+  }
+  .modalContent {
+    width: 250px;
+    height: 200px;
+  }
+  .second.logo {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .cardImage {
+    height: 150px;
+    width: 150px;
+    /* vertical-align: bottom; */
+  }
+  
+}
+
+@media only screen and (min-width:631px) and (max-width:1024){
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .cardImage {
+    height: 150px;
+    width: 150px;
+  
+  }
+}
+
+@media (min-width: 2500px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}

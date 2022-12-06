@@ -4,7 +4,7 @@ import BMO from '../assets/BMO.webp';
 import Bubblegum from '../assets/bubblegum.jpg';
 import CinnamonBun from '../assets/cinnamonBun.jpg';
 import Finn from '../assets/FinnHeadshot.webp';
-import FlamePrincess from '../assets/flamePrincess.webp';
+import FlamePrincess from '../assets/flamePrincess.png';
 import Gunter from '../assets/gunter.webp';
 import IceKing from '../assets/iceKing.webp';
 import Jake from '../assets/jake.webp';
@@ -14,12 +14,14 @@ import PeppermintButler from '../assets/peppermintButler.webp';
 import TreeTrunks from '../assets/treeTrunks.webp';
 import Cards from './Cards';
 import '../App.css';
+import EndGameModal from './EndGameModal';
 
 const Gameboard = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const maxScore = 12;
   const [comparison, setComparison] = useState([]);
+  const [endGameModal, setEndGameModal] = useState(false);
 
   const characters = [
     { name: 'BMO', image: BMO, id: uniqid() },
@@ -48,15 +50,27 @@ const Gameboard = () => {
     if (comparison.includes(clickedCharacter)) {
       setComparison([]);
       setCurrentScore(0);
+      setEndGameModal('lose');
     } else {
       setComparison([...comparison, clickedCharacter]);
       setCurrentScore(currentScore + 1);
     }
   };
 
+  const resetGame = () => {
+    setComparison([]);
+    setCurrentScore(0);
+    setEndGameModal(false);
+    document.body.classList.remove('modal');
+  };
+
   useEffect(() => {
     if (currentScore > bestScore) {
       setBestScore(currentScore);
+    }
+
+    if (currentScore === 12) {
+      setEndGameModal('won');
     }
   }, [currentScore, bestScore]);
 
@@ -88,6 +102,7 @@ const Gameboard = () => {
           );
         })}
       </section>
+      {endGameModal ? <EndGameModal resetGame={resetGame} endGameModal={endGameModal} /> : null}
     </div>
   );
 };

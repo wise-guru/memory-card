@@ -6,12 +6,14 @@ const Header = () => {
       <img className="logo" src={Logo} alt="Adventure Time Logo" />
       <div className="headerText">
         <h1>Memory Time</h1>
-        <div className="instructions">
-          Click through all of the cards without clicking on any more than once
-          {/* <div className="exclamation">!</div> */}
+        <div className="instructions" style={{ textAlign: 'center' }}>
+          <div>
+            Click through all of the characters only once to win
+            <span className="exclamation">!</span>
+          </div>
         </div>
       </div>
-      <img className="logo" src={Logo} alt="Adventure Time Logo" />
+      <img className="second logo" src={Logo} alt="Adventure Time Logo" />
     </header>
   );
 };
