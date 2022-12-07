@@ -21,7 +21,7 @@ const Gameboard = () => {
   const [bestScore, setBestScore] = useState(0);
   const maxScore = 12;
   const [comparison, setComparison] = useState([]);
-  const [endGameModal, setEndGameModal] = useState(true);
+  const [endGameModal, setEndGameModal] = useState(false);
 
   const characters = [
     { name: 'BMO', image: BMO, id: uniqid() },
